@@ -1,0 +1,130 @@
+.aside {
+	background-color: #0f172a;
+	width: 240px;
+	min-width: 240px;
+	height: calc(100vh - 56px);
+	display: flex;
+	flex-direction: column;
+	padding: 16px 12px;
+	border-right: 1px solid rgba(255, 255, 255, 0.06);
+	overflow-y: auto;
+}
+
+/* Profile block */
+.aside__profile {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 12px;
+	margin-bottom: 8px;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.aside__avatar {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #334155, #475569);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	font-weight: 700;
+	color: white;
+	flex-shrink: 0;
+}
+
+.aside__profile-name {
+	font-size: 13px;
+	font-weight: 600;
+	color: white;
+	line-height: 1.3;
+}
+
+.aside__profile-role {
+	font-size: 11px;
+	color: rgba(255, 255, 255, 0.35);
+	margin-top: 1px;
+}
+
+/* Section label */
+.aside__section-label {
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.25);
+	padding: 12px 12px 6px;
+}
+
+/* Nav list */
+.aside__list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	flex: 1;
+}
+
+.aside__link {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 9px 12px;
+	border-radius: 8px;
+	font-size: 13px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 0.55);
+	text-decoration: none;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+.aside__link:hover {
+	background: rgba(255, 255, 255, 0.07);
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.aside__link.active,
+.aside__link[aria-current='page'] {
+	background: rgba(255, 255, 255, 0.1);
+	color: white;
+}
+
+.aside__link-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	opacity: 0.7;
+	transition: opacity 0.2s;
+}
+
+.aside__link:hover .aside__link-icon {
+	opacity: 1;
+}
+
+/* Footer / logout */
+.aside__footer {
+	padding-top: 12px;
+	border-top: 1px solid rgba(255, 255, 255, 0.07);
+	margin-top: 8px;
+}
+
+.aside__logout {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 9px 12px;
+	border-radius: 8px;
+	font-size: 13px;
+	font-weight: 500;
+	color: rgba(255, 100, 100, 0.6);
+	text-decoration: none;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+.aside__logout:hover {
+	background: rgba(255, 80, 80, 0.08);
+	color: rgba(255, 100, 100, 0.9);
+}

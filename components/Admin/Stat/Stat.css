@@ -1,0 +1,64 @@
+.admin-stat {
+	position: relative;
+	overflow: hidden;
+	border: 1px solid rgba(255, 255, 255, 0.07);
+	border-radius: 14px;
+	padding: 20px 22px 22px;
+	min-width: 180px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.admin-stat:hover {
+	border-color: rgba(255, 255, 255, 0.13);
+	transform: translateY(-2px);
+}
+
+/* Thin accent line on top */
+.admin-stat__accent {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 3px;
+	border-radius: 14px 14px 0 0;
+	opacity: 0.85;
+}
+
+.admin-stat__top {
+	display: flex;
+	justify-content: flex-end;
+	min-height: 20px;
+	margin-bottom: 4px;
+}
+
+.admin-stat__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 9px;
+}
+
+.admin-stat__value {
+	font-size: 32px;
+	font-weight: 800;
+	color: #ffffff;
+	line-height: 1;
+	letter-spacing: -0.5px;
+}
+
+.admin-stat__title {
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.4);
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.admin-stat__title--link:hover {
+	color: rgba(255, 255, 255, 0.75);
+	text-decoration: underline;
+}

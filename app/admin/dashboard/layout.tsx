@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
+import '../../globals.css';
 import SocialsFixed from '@/components/SocialsFixed/SocialsFixed';
-import AosInit from '@/components/AosInit/AosInit';
+import Header from '@/layout/AdminPage/Header/Header';
+import Aside from '@/layout/AdminPage/Aside/Aside';
 
 const inter = Inter({
 	variable: '--font-inter',
@@ -23,9 +24,12 @@ export default function RootLayout({
 	return (
 		<html lang='en' className={`${inter.variable} h-full antialiased`}>
 			<body className='min-h-full flex flex-col font-(--font-inter)'>
-				{children}
+				<Header />
+				<div className='flex'>
+					<Aside />
+					{children}
+				</div>
 				<SocialsFixed />
-				<AosInit />
 			</body>
 		</html>
 	);

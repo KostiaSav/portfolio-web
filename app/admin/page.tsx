@@ -1,3 +1,4 @@
+import Form from '@/layout/AdminPage/Form/Form';
 import Cta from '@/layout/Cta/Cta';
 import FiverrGigs from '@/layout/FiverrGigs/FiverrGigs';
 import Footer from '@/layout/Footer/Footer';
@@ -11,27 +12,8 @@ import Technologies from '@/layout/Technologies/Technologies';
 
 export default function Home() {
 	return (
-		<div className=''>
-			<Header />
-			<div id='home'>
-				<Hero />
-			</div>
-			<Stats />
-			<div id='projects'>
-				<Projects />
-			</div>
-			<FiverrGigs />
-			<Process />
-			<div id='technology'>
-				<Technologies />
-			</div>
-			<div id='reviews'>
-				<Reviews />
-			</div>
-			<div id='contact'>
-				<Cta />
-			</div>
-			<Footer />
+		<div>
+			<Form />
 		</div>
 	);
 }

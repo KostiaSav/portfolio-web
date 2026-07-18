@@ -1,0 +1,50 @@
+[
+	{
+		"id": "custom-wordpress-business-website",
+		"image": "/projects/сustom-gig.jpg",
+		"title": "Custom WordPress Business Website",
+		"description": "Complete development of a modern WordPress business site with Advanced Custom Fields, focused on performance and easy content management.",
+		"imageCount": 2,
+		"platform": "wordpress"
+	},
+	{
+		"id": "wordpress-lendex",
+		"image": "/projects/lendex-gig.jpg",
+		"title": "Wordpress – Lendex",
+		"description": "Fully custom corporate website for a financial services company, built with WordPress and Elementor, including multilingual support.",
+		"imageCount": 1,
+		"platform": "wordpress"
+	},
+	{
+		"id": "greenwood-property-management",
+		"image": "/projects/greenwood-gig.jpg",
+		"title": "GreenWood – Property Management Website",
+		"description": "Modern, high-performance website for a property management company in Israel with a premium, minimalist design.",
+		"imageCount": 1,
+		"platform": "wordpress"
+	},
+	{
+		"id": "pharma-design-development",
+		"image": "/gigs/pharma-design-development.jpg",
+		"title": "Design & Development – Pharmaceutical Industry",
+		"description": "Responsive corporate website for the pharmaceutical industry, covering both design and front-end development.",
+		"imageCount": 1,
+		"platform": "fiverr"
+	},
+	{
+		"id": "outdoor-gear-ecommerce",
+		"image": "/gigs/outdoor-gear-ecommerce.jpg",
+		"title": "Outdoor Gear eCommerce Website",
+		"description": "Custom eCommerce website for a hunting gear brand, focused on performance, usability, and conversions.",
+		"imageCount": 1,
+		"platform": "wordpress"
+	},
+	{
+		"id": "creative-agency-landing",
+		"image": "/gigs/creative-agency-landing.jpg",
+		"title": "Creative Agency Landing Page – WordPress Development",
+		"description": "High-converting landing page for a creative agency, combining custom HTML5/SCSS with full WordPress integration and a custom Elementor widget.",
+		"imageCount": 2,
+		"platform": "wordpress"
+	}
+]

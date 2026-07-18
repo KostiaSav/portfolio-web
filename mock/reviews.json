@@ -1,0 +1,135 @@
+[
+	{
+		"id": "fh-blog-na-sayti",
+		"platform": "freelancehunt",
+		"name": "Mykola Customer",
+		"position": "Freelancehunt Client",
+		"projectTitle": "Blog on Website",
+		"content": "The work was done professionally and quickly. Kostiantyn was always in touch and answered all my questions. Highly recommend working with him!!!",
+		"rating": 5.0,
+		"avatarLink": "/avatars/free123.png",
+		"platformImageLink": null
+	},
+	{
+		"id": "fh-framer-dopratsyuvannya",
+		"platform": "freelancehunt",
+		"name": "Mykola Customer",
+		"position": "Freelancehunt Client",
+		"projectTitle": "Framer Refinement",
+		"content": "Kostiantyn completed all my Framer tasks very quickly. I was very happy with the result. Recommend!!!",
+		"rating": 5.0,
+		"avatarLink": "/avatars/free123.png",
+		"platformImageLink": null
+	},
+	{
+		"id": "fh-figma-na-framer",
+		"platform": "freelancehunt",
+		"name": "Mykola Customer",
+		"position": "Freelancehunt Client",
+		"projectTitle": "From Figma to Framer",
+		"content": "Everything was great, I really enjoyed working with Kostya. He implemented the design from Figma into Framer and it turned out wonderfully. Recommend!",
+		"rating": 5.0,
+		"avatarLink": "/avatars/free123.png",
+		"platformImageLink": null
+	},
+	{
+		"id": "fiverr-bye_rial",
+		"platform": "fiverr",
+		"name": "bye_rial",
+		"position": "Fiverr Client · Belgium",
+		"projectTitle": "Convert Figma Design to a Responsive WordPress Website",
+		"content": "The work was completed with high quality and within a short timeframe. The project was delivered two days ahead of the deadline. I am fully satisfied with the collaboration and can confidently recommend working together.",
+		"rating": 5.0,
+		"avatarLink": "/avatars/bye_rial.jpg",
+		"platformImageLink": "/fiverr.png"
+	},
+	{
+		"id": "fiverr-authorify",
+		"platform": "fiverr",
+		"name": "authorify",
+		"position": "Fiverr Client · Israel",
+		"projectTitle": "Convert Figma Design to a Responsive WordPress Website",
+		"content": "First project with Konstantin. At the moment, everything is great, the page looks almost indistinguishable from the design. SEO score is great too. Thank you very much, we will continue working on the project.",
+		"rating": 5.0,
+		"avatarLink": "/avatars/authorify.jpg",
+		"platformImageLink": "/fiverr.png"
+	},
+
+	{
+		"id": "fh-landing-smm-servis",
+		"platform": "freelancehunt",
+		"name": "Artur Bezdarnyi",
+		"position": "Freelancehunt Client",
+		"projectTitle": "Landing Page for an SMM Service",
+		"content": "The work was done excellently! I liked that different solutions were offered — using CSS for simple animations and combining it with JavaScript to add interactivity, making the landing page more attractive and user-friendly. Rating: 5/5. He also showed a high level of knowledge and attention to detail, which made it easy for me to bring my vision to life on my website.",
+		"rating": 5.0,
+		"avatarLink": "/avatars/esendery.png",
+		"platformImageLink": null
+	},
+	{
+		"id": "fh-sozdanie-sayta-na-framer",
+		"platform": "freelancehunt",
+		"name": "Den D",
+		"position": "Freelancehunt Client",
+		"projectTitle": "Building a Website on Framer",
+		"content": "Everything was done quickly and professionally. Always in touch. Will keep working together.",
+		"rating": 5.0,
+		"avatarLink": "/avatars/dendov.png",
+		"platformImageLink": null
+	},
+	{
+		"id": "fh-adaptivna-verstka",
+		"platform": "freelancehunt",
+		"name": "Andrii Stetsenko",
+		"position": "Freelancehunt Client",
+		"projectTitle": "Responsive Markup of 2 Pages (HTML+CSS+JS)",
+		"content": "We worked constructively together and the result already looks great.",
+		"rating": 4.8,
+		"avatarLink": "/avatars/skmedia.png",
+		"platformImageLink": null
+	},
+	{
+		"id": "fh-lending-na-storinki",
+		"platform": "freelancehunt",
+		"name": "Kostiantyn Pyvnenko",
+		"position": "Freelancehunt Client",
+		"projectTitle": "3-Page Landing Page",
+		"content": "I'm happy with Kostiantyn's work. The task wasn't complex, but Kostiantyn handled it quickly and was always in touch.",
+		"rating": 4.7,
+		"avatarLink": "/avatars/llirik30.png",
+		"platformImageLink": null
+	},
+	{
+		"id": "fh-kalkulyator-css",
+		"platform": "freelancehunt",
+		"name": "Oleksandr Kryshtopa",
+		"position": "Freelancehunt Client",
+		"projectTitle": "JS Calculator and CSS Fixes",
+		"content": "Great work. A reliable freelancer.",
+		"rating": 5.0,
+		"avatarLink": "/avatars/kryshtopa.png",
+		"platformImageLink": null
+	},
+	{
+		"id": "fiverr-jprealey",
+		"platform": "fiverr",
+		"name": "jprealey",
+		"position": "Fiverr Client · United Kingdom",
+		"projectTitle": "Convert Figma Design to a Responsive WordPress Website",
+		"content": "It was a pleasure working with Kostiantyn. The quality of work was exceptional and exceeded all expectations. I hope to work with him for many years to come. I am super happy.",
+		"rating": 5.0,
+		"avatarLink": "/avatars/jprealey.jpg",
+		"platformImageLink": "/fiverr.png"
+	},
+	{
+		"id": "fiverr-rangol",
+		"platform": "fiverr",
+		"name": "rangol",
+		"position": "Fiverr Client · Hong Kong",
+		"projectTitle": "Convert Figma Design to a Responsive WordPress Website",
+		"content": "Great professional results. Good support.",
+		"rating": 5.0,
+		"avatarLink": "/avatars/free123.png",
+		"platformImageLink": "/fiverr.png"
+	}
+]

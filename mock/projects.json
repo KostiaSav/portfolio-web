@@ -1,0 +1,37 @@
+[
+	{
+		"id": "custom-wordpress-business-website",
+		"title": "Custom WordPress Business Website",
+		"description": "A fully custom 6-page WordPress business site built with Advanced Custom Fields — fast, SEO-friendly, and easy for the client to manage.",
+		"image": "/projects/custom.jpg",
+		"href": "https://www.fiverr.com/users/kostya_prodan/portfolio",
+		"badgesList": [
+			{ "text": "WordPress", "bgColor": "#21759b" },
+			{ "text": "ACF", "bgColor": "#2196f3" }
+		]
+	},
+	{
+		"id": "wordpress-lendex",
+		"title": "Wordpress - Lendex",
+		"description": "A 9-page custom corporate site for a financial services company, built on WordPress with custom Elementor widgets and multilingual support.",
+		"image": "/projects/lendex.jpg",
+		"href": "https://www.fiverr.com/users/kostya_prodan/portfolio",
+		"badgesList": [
+			{ "text": "WordPress", "bgColor": "#21759b" },
+			{ "text": "HTML/CSS/JAVASCRIPT", "bgColor": "#e34f26" },
+			{ "text": "Elementor", "bgColor": "#92003b" }
+		]
+	},
+	{
+		"id": "greenwood-property-management",
+		"title": "GreenWood - Property Management Website",
+		"description": "A premium, minimalist website for an Israeli property management company, pixel-perfect and optimized for 90+ PageSpeed performance.",
+		"image": "/projects/greenwood.jpg",
+		"href": "https://www.fiverr.com/users/kostya_prodan/portfolio",
+		"badgesList": [
+			{ "text": "WordPress", "bgColor": "#21759b" },
+			{ "text": "HTML/CSS/JAVASCRIPT", "bgColor": "#e34f26" },
+			{ "text": "Elementor", "bgColor": "#92003b" }
+		]
+	}
+]

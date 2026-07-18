@@ -1,0 +1,75 @@
+.process__steps {
+	position: relative;
+}
+
+.process__step {
+	position: relative;
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 16px;
+	padding: 28px 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
+}
+
+.process__step:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 16px 40px rgba(30, 41, 59, 0.1);
+}
+
+.process__step-number {
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	color: #94a3b8;
+	background: #f1f5f9;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 8px;
+}
+
+.process__step-icon {
+	color: #1e293b;
+	margin-top: 4px;
+}
+
+.process__step-title {
+	font-size: 18px;
+	font-weight: 700;
+	color: #1e293b;
+}
+
+.process__step-desc {
+	font-size: 14px;
+	line-height: 1.6;
+	color: #64748b;
+}
+
+/* Arrow connector between cards */
+.process__connector {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: -22px;
+	width: 18px;
+	height: 2px;
+	background: #cbd5e1;
+	z-index: 1;
+}
+
+.process__connector::after {
+	content: '';
+	position: absolute;
+	right: -1px;
+	top: -4px;
+	border-left: 6px solid #cbd5e1;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+}
