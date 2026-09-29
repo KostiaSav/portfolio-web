@@ -96,3 +96,79 @@
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 }
+
+/* Full description on hover (isHoverFullDescription) */
+.gig__overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 8px;
+	padding: 20px;
+	overflow-y: auto;
+	color: #ffffff;
+	background: linear-gradient(
+		180deg,
+		rgba(15, 23, 42, 0.35) 0%,
+		rgba(15, 23, 42, 0.92) 55%,
+		rgba(15, 23, 42, 0.96) 100%
+	);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	opacity: 0;
+	transform: translateY(16px);
+	pointer-events: none;
+	transition:
+		opacity 0.3s ease,
+		transform 0.35s ease;
+}
+
+.gig__overlay-title {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.35;
+}
+
+.gig__overlay-desc {
+	font-size: 13px;
+	line-height: 1.6;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.gig__badges {
+	transition: opacity 0.2s ease;
+}
+
+@media (hover: hover) {
+	.gig--hover-desc:hover .gig__overlay,
+	.gig--hover-desc:focus-visible .gig__overlay {
+		opacity: 1;
+		transform: translateY(0);
+		pointer-events: auto;
+	}
+
+	.gig--hover-desc:hover .gig__badges,
+	.gig--hover-desc:focus-visible .gig__badges {
+		opacity: 0;
+	}
+}
+
+/* Touch devices: no hover, so show the full description in the card body */
+@media (hover: none) {
+	.gig__overlay {
+		display: none;
+	}
+
+	.gig--hover-desc .gig__desc {
+		-webkit-line-clamp: unset;
+		display: block;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.gig__overlay {
+		transform: none;
+		transition: opacity 0.2s ease;
+	}
+}

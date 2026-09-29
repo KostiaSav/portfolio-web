@@ -85,23 +85,35 @@ const statItems = [
 
 const Stats = () => {
 	return (
-		<section className='stats bg-gr text-white'>
+		<section className='stats py-6 md:py-10'>
 			<div className='container'>
-				<div className='stats__list grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center py-12'>
-					{statItems.map((item, index) => (
-						<div
-							key={item.label}
-							className='stats__item flex flex-col items-center gap-3'
-							data-aos='fade-up'
-							data-aos-delay={index * 100}
-						>
-							<div className='flex gap-2 items-end'>
-								<div className='text-white'>{item.icon}</div>
-								<h3 className='text-3xl font-bold'>{item.value}</h3>
+				<div className='stats__panel relative isolate overflow-hidden rounded-3xl bg-linear-to-br from-slate-900 via-[#304363] to-[#4f6a9f] text-white shadow-2xl shadow-slate-900/20'>
+					<div className='stats__grid pointer-events-none absolute inset-0 -z-10'></div>
+					<div className='pointer-events-none absolute -top-24 -right-16 -z-10 h-72 w-72 rounded-full bg-sky-400 opacity-25 blur-3xl'></div>
+					<div className='pointer-events-none absolute -bottom-24 -left-16 -z-10 h-72 w-72 rounded-full bg-indigo-400 opacity-20 blur-3xl'></div>
+
+					<div className='stats__list grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10'>
+						{statItems.map((item, index) => (
+							<div
+								key={item.label}
+								className='stats__item group flex flex-col items-center md:items-center gap-2 bg-slate-900/40 px-5 py-8 md:px-8 md:py-10 text-center md:text-left transition-colors duration-300 hover:bg-white/5'
+								data-aos='fade-up'
+								data-aos-delay={index * 100}
+							>
+								<div className='flex h-12 w-12 items-center justify-center rounded-2xl border border-white/15 bg-white/10 text-sky-300 backdrop-blur transition-transform duration-300 group-hover:-translate-y-1'>
+									{item.icon}
+								</div>
+								<div>
+									<h3 className='bg-linear-to-r text-center from-white to-sky-200 bg-clip-text text-4xl md:text-5xl font-extrabold tracking-tight text-transparent'>
+										{item.value}
+									</h3>
+									<p className='mt-1 text-center text-sm font-medium text-white/60'>
+										{item.label}
+									</p>
+								</div>
 							</div>
-							<p className='text-sm text-white/60'>{item.label}</p>
-						</div>
-					))}
+						))}
+					</div>
 				</div>
 			</div>
 		</section>

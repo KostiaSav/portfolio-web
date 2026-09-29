@@ -1,41 +1,73 @@
 .technology {
-	background: #ffffff;
+	--tech-color: #4f6a9f;
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.75);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
 	border: 1px solid #e2e8f0;
-	border-radius: 16px;
-	padding: 16px 12px;
+	border-radius: 20px;
+	padding: 18px 12px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 10px;
-	transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+	gap: 12px;
+	box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease,
+		border-color 0.3s ease;
 	cursor: default;
+}
+
+/* Brand-colored glow revealed on hover */
+.technology::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: radial-gradient(
+		circle at 50% 0%,
+		color-mix(in srgb, var(--tech-color) 18%, transparent),
+		transparent 70%
+	);
+	opacity: 0;
+	transition: opacity 0.3s ease;
 }
 
 @media (min-width: 768px) {
 	.technology {
-		padding: 24px 20px;
-		gap: 14px;
+		padding: 22px 12px;
 	}
 }
 
 .technology:hover {
 	transform: translateY(-5px);
-	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.09);
-	border-color: transparent;
+	border-color: color-mix(in srgb, var(--tech-color) 40%, #e2e8f0);
+	box-shadow: 0 16px 32px -14px
+		color-mix(in srgb, var(--tech-color) 55%, transparent);
+}
+
+.technology:hover::before {
+	opacity: 1;
 }
 
 .technology__icon {
 	width: 56px;
 	height: 56px;
-	border-radius: 14px;
+	border-radius: 16px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: transform 0.25s ease;
+	background-color: color-mix(in srgb, var(--tech-color) 10%, #ffffff);
+	border: 1px solid color-mix(in srgb, var(--tech-color) 15%, transparent);
+	transition: transform 0.3s ease;
 }
 
 .technology:hover .technology__icon {
-	transform: scale(1.1);
+	transform: scale(1.1) rotate(-4deg);
 }
 
 .technology__title {
@@ -43,4 +75,13 @@
 	font-weight: 600;
 	color: #1e293b;
 	text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.technology,
+	.technology:hover,
+	.technology:hover .technology__icon {
+		transition: none;
+		transform: none;
+	}
 }

@@ -33,3 +33,116 @@ body {
 		transform 0.3s ease,
 		box-shadow 0.3s ease;
 }
+
+.trn-standard {
+	transition: 0.3s;
+}
+
+.fiverr-link:hover {
+	color: #1bae69;
+}
+
+.upwork-link:hover {
+	color: #42c122;
+}
+
+.freelancehunt-link:hover {
+	color: #fd9200;
+}
+
+.footer-main-links li a {
+	transition: 0.3s;
+}
+
+.footer-main-links li a:hover {
+	color: #24a1dd;
+}
+
+/* Hero */
+.hero__grid {
+	background-image:
+		linear-gradient(to right, rgba(15, 23, 42, 0.06) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+	background-size: 48px 48px;
+	mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+.hero__ring {
+	background: conic-gradient(from 0deg, #304363, #4f6a9f, #38bdf8, #304363);
+	animation: hero-spin 8s linear infinite;
+}
+
+.hero__float {
+	animation: hero-float 5s ease-in-out infinite;
+}
+
+.hero__float--delay {
+	animation-delay: -2.5s;
+}
+
+@keyframes hero-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes hero-float {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero__ring,
+	.hero__float {
+		animation: none;
+	}
+}
+
+/* Stats */
+.stats__grid {
+	background-image:
+		linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+	background-size: 40px 40px;
+	mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%);
+}
+
+/* Blog post content */
+.blog-post__content section {
+	scroll-margin-top: 110px;
+}
+
+.blog-post__content section + section {
+	margin-top: 48px;
+}
+
+.blog-post__content h2 {
+	font-size: 28px;
+	font-weight: 800;
+	line-height: 1.25;
+	letter-spacing: -0.02em;
+	color: #0f172a;
+	margin-bottom: 16px;
+}
+
+.blog-post__content p {
+	font-size: 17px;
+	line-height: 1.8;
+	color: #334155;
+}
+
+.blog-post__content p + p {
+	margin-top: 18px;
+}
+
+.blog-post__content a {
+	color: #4f6a9f;
+	font-weight: 600;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}

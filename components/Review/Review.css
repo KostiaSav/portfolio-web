@@ -1,71 +1,68 @@
 .reviews__item {
 	padding: 24px;
-	background: linear-gradient(
-		135deg,
-		rgba(255, 255, 255, 0.12) 0%,
-		rgba(255, 255, 255, 0.06) 100%
-	);
+	background-color: rgba(255, 255, 255, 0.75);
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
-	border: 1px solid rgba(255, 255, 255, 0.12);
-	border-radius: 16px;
+	border: 1px solid #e2e8f0;
+	border-radius: 24px;
 	box-shadow:
-		0 8px 32px rgba(0, 0, 0, 0.25),
-		inset 0 1px 0 rgba(255, 255, 255, 0.1);
+		0 1px 2px rgba(15, 23, 42, 0.04),
+		0 8px 24px -12px rgba(15, 23, 42, 0.12);
 	transition:
 		transform 0.3s ease,
-		box-shadow 0.3s ease;
+		box-shadow 0.3s ease,
+		border-color 0.3s ease;
 }
 
 .reviews__item:hover {
 	transform: translateY(-4px);
+	border-color: #cbd5e1;
 	box-shadow:
-		0 16px 40px rgba(0, 0, 0, 0.35),
-		inset 0 1px 0 rgba(255, 255, 255, 0.15);
+		0 1px 2px rgba(15, 23, 42, 0.04),
+		0 20px 40px -16px rgba(48, 67, 99, 0.3);
 }
 
 .reviews__item__quote {
-	font-size: 48px;
-	line-height: 1;
-	color: rgba(255, 255, 255, 0.2);
-	margin-bottom: 4px;
-	font-family: Georgia, serif;
-	max-height: 42px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 12px;
+	color: #ffffff;
+	background-image: linear-gradient(120deg, #304363, #4f6a9f, #38bdf8);
+	box-shadow: 0 6px 16px -6px rgba(48, 67, 99, 0.5);
 }
 
 .reviews__item__stars {
 	display: flex;
-	gap: 3px;
-	margin-bottom: 8px;
+	gap: 2px;
 	color: #f59e0b;
 }
 
-.reviews__grid {
-	grid-template-columns: 3fr 1fr;
-}
-
 .reviews__item-image {
-	width: 46px;
-	height: 46px;
+	width: 44px;
+	height: 44px;
 	border-radius: 50%;
 	object-fit: cover;
-	border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.reviews__item__bottom {
-	border-color: rgba(255, 255, 255, 0.12) !important;
-}
-
-.reviews__item-image-f {
-	filter: contrast(0) brightness(3);
+	box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #e2e8f0;
 }
 
 .reviews__item-logo-text {
 	font-size: 14px;
-	color: rgba(255, 255, 255, 0.9);
+	font-weight: 600;
+	color: #334155;
 	letter-spacing: -0.3px;
 }
 
 .reviews__item-logo-text strong {
 	color: #f97316;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.reviews__item,
+	.reviews__item:hover {
+		transition: none;
+		transform: none;
+	}
 }

@@ -28,9 +28,7 @@ export default function Home() {
 			<div id='reviews'>
 				<Reviews />
 			</div>
-			<div id='contact'>
-				<Cta />
-			</div>
+			<Cta />
 			<Footer />
 		</div>
 	);

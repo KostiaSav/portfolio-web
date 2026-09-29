@@ -1,0 +1,211 @@
+[
+	{
+		"id": "nextjs-portfolio-performance",
+		"title": "How I Made My Next.js Portfolio Load in Under a Second",
+		"excerpt": "Image optimization, font loading, and a few rendering tricks that took my Lighthouse score from 72 to 99 — with before/after numbers for each step.",
+		"image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+		"category": "Next.js",
+		"date": "2026-09-12",
+		"readTime": 7,
+		"featured": true,
+		"sections": [
+			{
+				"id": "starting-point",
+				"title": "Where I Started",
+				"content": [
+					"My portfolio looked fine, but the Lighthouse report told a different story: a performance score of 72, a slow Largest Contentful Paint, and layout shifts on almost every section.",
+					"Before changing anything, I recorded the baseline numbers so every improvement could be measured instead of guessed.",
+					"I used three tools for measuring: Lighthouse in Chrome DevTools, PageSpeed Insights for real-user data, and the Performance tab to see exactly what the browser was doing during the first few seconds.",
+					"The main problems were clear pretty quickly: oversized images, a render-blocking font request, and a few heavy scripts that loaded on every page even though only one section used them."
+				]
+			},
+			{
+				"id": "images",
+				"title": "Optimizing Images",
+				"content": [
+					"The biggest win came from images. Switching everything to next/image with correct sizes attributes cut the transferred bytes by more than half.",
+					"I also marked the hero image as priority, so the browser starts loading it before anything else.",
+					"Many images on the site were exported at 3000px wide and then scaled down with CSS. The browser still had to download the full file, which is a huge waste on mobile connections.",
+					"With next/image, the framework generates several versions of each image and serves the right size for every screen. It also converts images to modern formats like WebP and AVIF when the browser supports them.",
+					"Finally, I added explicit width and height to every image. This reserves space in the layout before the image loads and removes most of the layout shifts that were hurting the CLS score."
+				]
+			},
+			{
+				"id": "fonts",
+				"title": "Loading Fonts the Right Way",
+				"content": [
+					"Using next/font removed the external font request and the flash of unstyled text. Fonts are now self-hosted and preloaded automatically.",
+					"Before, the site loaded Inter from Google Fonts with a regular link tag. That meant an extra DNS lookup, an extra connection, and a moment where text was invisible while the font was downloading.",
+					"With next/font the font files are downloaded at build time and served from the same domain. The font is also subset to only the characters I actually use, which makes the files noticeably smaller."
+				]
+			},
+			{
+				"id": "results",
+				"title": "Results",
+				"content": [
+					"After these changes the score went from 72 to 99, and LCP dropped below one second on a regular 4G connection.",
+					"Total page weight went down from 3.4 MB to 780 KB, and the Cumulative Layout Shift is now almost zero. The site also feels faster when navigating between pages, not just on the first load.",
+					"None of these changes took more than an afternoon. The key was measuring first and fixing the biggest problem, then measuring again."
+				]
+			},
+			{
+				"id": "checklist",
+				"title": "My Performance Checklist",
+				"content": [
+					"Every new project now goes through the same short checklist before launch: optimized images with correct sizes, self-hosted fonts, no unused third-party scripts, and a Lighthouse run on a throttled mobile connection.",
+					"It takes about fifteen minutes, and it catches most performance problems before a client ever sees them."
+				]
+			}
+		]
+	},
+	{
+		"id": "webflow-vs-framer",
+		"title": "Webflow vs Framer: Which One to Pick for a Client Landing Page",
+		"excerpt": "A practical comparison from real client projects: editing experience, CMS limits, animations, SEO, and pricing.",
+		"image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80",
+		"category": "No-code",
+		"date": "2026-08-28",
+		"readTime": 5,
+		"sections": [
+			{
+				"id": "overview",
+				"title": "Overview",
+				"content": [
+					"Both Webflow and Framer let you ship a polished landing page without writing a full frontend. But they are built for different kinds of projects.",
+					"Over the last year I built client landing pages with both tools, from simple one-page product launches to multi-page marketing sites with a blog. Here is what I learned from real projects, not from feature lists.",
+					"The short version: both are excellent, and the right choice depends more on the client and the content than on the tool itself."
+				]
+			},
+			{
+				"id": "editing",
+				"title": "Editing Experience",
+				"content": [
+					"Framer feels like a design tool — fast, visual, and great for animations. Webflow is closer to real HTML and CSS, which gives more control over structure.",
+					"In Framer you can go from a Figma-like mockup to a live site incredibly fast. Interactions, scroll effects, and page transitions are built in and easy to tweak.",
+					"Webflow has a steeper learning curve, but it rewards you with predictable layouts. You work with real boxes, classes, and flex or grid settings, so the result behaves exactly like a hand-coded site.",
+					"For clients who want to edit texts themselves, both editors are friendly enough. Webflow's Editor mode is a bit more locked down, which is actually a good thing for non-technical users."
+				]
+			},
+			{
+				"id": "cms",
+				"title": "CMS and SEO",
+				"content": [
+					"Webflow's CMS is more mature and handles larger collections well. Framer's CMS is simpler, which is often enough for small marketing sites.",
+					"If a site needs a blog, case studies, or a job board, Webflow's collections, reference fields, and filtering make a real difference. Framer can handle a simple blog, but complex relationships between content types quickly hit its limits.",
+					"Both tools give you control over meta titles, descriptions, and Open Graph images. Webflow additionally makes it easy to set up 301 redirects, which matters when you migrate an existing site."
+				]
+			},
+			{
+				"id": "verdict",
+				"title": "Which One I Recommend",
+				"content": [
+					"For animation-heavy landing pages I pick Framer. For content-driven sites that will grow, Webflow is usually the safer choice.",
+					"Pricing is similar for small sites, but Webflow gets more expensive as the CMS grows. Framer is usually cheaper for simple landing pages.",
+					"Whatever tool you choose, the most important thing is a clear structure and good content. A well-planned site will work great on either platform."
+				]
+			},
+			{
+				"id": "migration",
+				"title": "Switching Between Them",
+				"content": [
+					"Moving a site from one tool to the other is not automatic — in practice it means rebuilding the layout. The content can be exported as CSV and imported into the new CMS, which saves most of the manual work.",
+					"If a client is unsure, I usually suggest starting with Framer for a quick launch and moving to Webflow later if the content really grows."
+				]
+			}
+		]
+	},
+	{
+		"id": "shopify-theme-customization",
+		"title": "Customizing a Shopify Theme Without Breaking Updates",
+		"excerpt": "How to structure sections, snippets, and app blocks so your changes survive the next theme update.",
+		"image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1200&q=80",
+		"category": "Shopify",
+		"date": "2026-08-10",
+		"readTime": 6,
+		"sections": [
+			{
+				"id": "problem",
+				"title": "The Problem With Editing Themes Directly",
+				"content": [
+					"Editing theme files directly works — until the next theme update overwrites your changes or causes merge conflicts.",
+					"Most Shopify themes receive updates several times a year: bug fixes, new features, and compatibility changes. If you customized the theme by editing its core files, every update becomes a manual merge.",
+					"In practice many store owners simply stop updating their theme, which means they miss security fixes and new features."
+				]
+			},
+			{
+				"id": "sections",
+				"title": "Use Sections and Blocks",
+				"content": [
+					"Building custom features as separate sections and blocks keeps your code isolated from the core theme files.",
+					"A custom section lives in its own file, with its own settings schema. The store owner can add it to any page from the theme editor, move it around, and configure it without touching code.",
+					"When the theme is updated, you only need to copy your custom section files into the new version. Everything else comes from the theme itself.",
+					"I also keep styles for custom sections in a separate CSS file, so theme updates never overwrite them."
+				]
+			},
+			{
+				"id": "app-blocks",
+				"title": "Prefer App Blocks",
+				"content": [
+					"When an app offers app blocks, use them instead of injecting code snippets. They are removed cleanly when the app is uninstalled.",
+					"Old-style app integrations often left snippets of code in the theme even after the app was removed. Over time this slows the store down and causes strange bugs.",
+					"App blocks are added and removed through the theme editor, just like regular sections, which keeps the theme code clean."
+				]
+			},
+			{
+				"id": "workflow",
+				"title": "My Workflow",
+				"content": [
+					"I work on a duplicate of the live theme, connected to GitHub. Every change is committed, so it is easy to see what was customized and to move those changes to a new theme version.",
+					"Before publishing, I test the duplicate on real products and on mobile. Only when everything works do I publish it and keep the old version as a backup."
+				]
+			}
+		]
+	},
+	{
+		"id": "wordpress-acf-workflow",
+		"title": "My WordPress + ACF Workflow for Business Websites",
+		"excerpt": "Flexible content fields, reusable blocks, and a setup that lets clients edit everything without calling a developer.",
+		"image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80",
+		"category": "WordPress",
+		"date": "2026-07-22",
+		"readTime": 8,
+		"sections": [
+			{
+				"id": "why-acf",
+				"title": "Why ACF",
+				"content": [
+					"Advanced Custom Fields lets me build page layouts that clients can edit safely, without touching the design.",
+					"The default WordPress editor gives clients too much freedom: they can change fonts, colors, and spacing on every block, and after a few months the site no longer looks like the original design.",
+					"With ACF, I define exactly which fields each block has — a title, a text, an image, a button. The client fills in the content, and the design stays under control."
+				]
+			},
+			{
+				"id": "flexible-content",
+				"title": "Flexible Content Layouts",
+				"content": [
+					"Each page is built from reusable blocks: hero, features, testimonials, FAQ. Clients can reorder them, but the styling always stays consistent.",
+					"Every block has its own PHP template and its own styles, so adding a new block to the library does not affect the others.",
+					"This approach also makes the site fast. There is no heavy page builder generating extra markup — just clean templates that output exactly the HTML the design needs.",
+					"For bigger projects I add a few global option pages for things like contact details, social links, and footer content, so they are edited in one place."
+				]
+			},
+			{
+				"id": "handover",
+				"title": "Handover to the Client",
+				"content": [
+					"I finish every project with a short video walkthrough, so the client knows exactly how to update content on their own.",
+					"The video covers the everyday tasks: editing text, replacing images, adding a new page, and publishing a blog post. It is usually 10 to 15 minutes long.",
+					"Clients tell me this is more useful than written documentation, because they can simply watch the part they need when they need it."
+				]
+			},
+			{
+				"id": "maintenance",
+				"title": "Keeping the Site Healthy",
+				"content": [
+					"After launch I recommend a simple routine: weekly backups, monthly plugin updates tested on a staging copy, and a yearly check of speed and security.",
+					"With a small number of well-maintained plugins, a WordPress site built this way can run for years without major problems."
+				]
+			}
+		]
+	}
+]

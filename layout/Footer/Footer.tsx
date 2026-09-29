@@ -2,6 +2,37 @@ import Logo from '@/ul/Logo/Logo';
 import Link from 'next/link';
 import React from 'react';
 
+const pageLinks = [
+	{ href: '/', label: 'Home' },
+	{ href: '/portfolio', label: 'Portfolio' },
+	{ href: '/blog', label: 'Blog' },
+];
+
+const sectionLinks = [
+	{ href: '/#projects', label: 'Projects' },
+	{ href: '/#technology', label: 'Technology' },
+	{ href: '/#reviews', label: 'Reviews' },
+	{ href: '/#contact', label: 'Contact' },
+];
+
+const freelanceLinks = [
+	{
+		href: 'https://www.fiverr.com/kostya_prodan',
+		label: 'Fiverr',
+		className: 'fiverr-link',
+	},
+	{
+		href: 'https://www.upwork.com/freelancers/~0104f494f7979e5f1f?mp_source=share',
+		label: 'Upwork',
+		className: 'upwork-link',
+	},
+	{
+		href: 'https://freelancehunt.com/freelancer/d4kostia.html',
+		label: 'FreelanceHunt',
+		className: 'freelancehunt-link',
+	},
+];
+
 const Footer = () => {
 	return (
 		<footer className='bg-gray-800 text-white'>
@@ -79,44 +110,42 @@ const Footer = () => {
 							</div>
 						</div>
 						<nav>
-							<h3 className='text-lg font-bold mb-5'>Main Links</h3>
-							<ul className='flex flex-col gap-4'>
-								<li>
-									<Link href='#'>Home</Link>
-								</li>
-								<li>
-									<Link href='#projects'>Projects</Link>
-								</li>
-								<li>
-									<Link href='#technology'>Technology</Link>
-								</li>
-								<li>
-									<Link href='#reviews'>Reviews</Link>
-								</li>
-								<li>
-									<Link href='#contact'>Contact</Link>
-								</li>
+							<h3 className='text-lg font-bold mb-5'>Pages</h3>
+							<ul className='flex flex-col gap-4 footer-main-links'>
+								{pageLinks.map(link => (
+									<li key={link.href}>
+										<Link href={link.href}>{link.label}</Link>
+									</li>
+								))}
 							</ul>
 						</nav>
 
 						<nav>
-							<h3 className='text-lg font-bold mb-5'>Freelance Links</h3>
+							<h3 className='text-lg font-bold mb-5'>Sections</h3>
+							<ul className='flex flex-col gap-4 footer-main-links'>
+								{sectionLinks.map(link => (
+									<li key={link.href}>
+										<Link href={link.href}>{link.label}</Link>
+									</li>
+								))}
+							</ul>
+						</nav>
+
+						<nav>
+							<h3 className='text-lg font-bold mb-5'>Freelance</h3>
 							<ul className='flex flex-col gap-4'>
-								<li>
-									<Link href='https://www.fiverr.com/kostya_prodan'>
-										Fiverr
-									</Link>
-								</li>
-								<li>
-									<Link href='https://www.upwork.com/freelancers/~0104f494f7979e5f1f?mp_source=share'>
-										Upwork
-									</Link>
-								</li>
-								<li>
-									<Link href='https://freelancehunt.com/freelancer/d4kostia.html'>
-										FreelanceHunt
-									</Link>
-								</li>
+								{freelanceLinks.map(link => (
+									<li key={link.href}>
+										<a
+											href={link.href}
+											target='_blank'
+											rel='noopener noreferrer'
+											className={`${link.className} trn-standard`}
+										>
+											{link.label}
+										</a>
+									</li>
+								))}
 							</ul>
 						</nav>
 					</div>

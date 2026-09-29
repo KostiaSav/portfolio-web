@@ -8,6 +8,7 @@ interface GigProps {
 	href?: string;
 	imageCount?: number;
 	platform?: 'fiverr' | 'wordpress';
+	isHoverFullDescription?: boolean;
 }
 
 const PlatformIcon = ({ platform }: { platform: 'fiverr' | 'wordpress' }) => {
@@ -32,9 +33,15 @@ const Gig = ({
 	href = 'https://www.fiverr.com/users/kostya_prodan/portfolio',
 	imageCount = 1,
 	platform = 'fiverr',
+	isHoverFullDescription = false,
 }: GigProps) => {
 	return (
-		<a href={href} target='_blank' rel='noopener noreferrer' className='gig'>
+		<a
+			href={href}
+			target='_blank'
+			rel='noopener noreferrer'
+			className={`gig${isHoverFullDescription ? ' gig--hover-desc' : ''}`}
+		>
 			<div className='gig__image-wrap'>
 				<Image src={image} alt={title} fill className='gig__image' />
 				<div className='gig__badges'>
@@ -54,6 +61,12 @@ const Gig = ({
 						{imageCount}
 					</span>
 				</div>
+				{isHoverFullDescription && (
+					<div className='gig__overlay' aria-hidden='true'>
+						<h3 className='gig__overlay-title'>{title}</h3>
+						<p className='gig__overlay-desc'>{description}</p>
+					</div>
+				)}
 			</div>
 			<div className='gig__body'>
 				<h3 className='gig__title'>{title}</h3>
